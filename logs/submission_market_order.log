@@ -1,0 +1,6 @@
+2026-07-01 18:01:13 | INFO     | trading_bot.orders | Placing order: {'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'MARKET', 'quantity': '0.001', 'price': None}
+2026-07-01 18:01:13 | INFO     | trading_bot.client | API request: POST /fapi/v1/order params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': '0.001', 'timestamp': 1782909073498, 'recvWindow': 5000}
+2026-07-01 18:01:13 | INFO     | trading_bot.client | API response: status=200 body={'orderId': 18235683407, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'HVXUWSwJnzzCbXcVVXzttF', 'price': '0.00', 'origQty': '0.0010', 'executedQty': '0.0000', 'type': 'MARKET', 'side': 'BUY'}
+2026-07-01 18:01:13 | INFO     | trading_bot.client | API request: GET /fapi/v1/order params={'symbol': 'BTCUSDT', 'orderId': 18235683407, 'timestamp': 1782909073873, 'recvWindow': 5000}
+2026-07-01 18:01:14 | INFO     | trading_bot.client | API response: status=200 body={'orderId': 18235683407, 'symbol': 'BTCUSDT', 'status': 'FILLED', 'avgPrice': '58543.100000', 'executedQty': '0.0010', 'type': 'MARKET', 'side': 'BUY'}
+2026-07-01 18:01:14 | INFO     | trading_bot.orders | Order placed successfully: orderId=18235683407 status=FILLED executedQty=0.0010 avgPrice=58543.100000

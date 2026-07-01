@@ -1,0 +1,4 @@
+2026-07-01 18:01:14 | INFO     | trading_bot.orders | Placing order: {'symbol': 'BTCUSDT', 'side': 'SELL', 'order_type': 'LIMIT', 'quantity': '0.001', 'price': '98000'}
+2026-07-01 18:01:14 | INFO     | trading_bot.client | API request: POST /fapi/v1/order params={'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': '0.001', 'price': '98000', 'timeInForce': 'GTC', 'timestamp': 1782909074836, 'recvWindow': 5000}
+2026-07-01 18:01:15 | INFO     | trading_bot.client | API response: status=200 body={'orderId': 18235688295, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'dAmyCtsLazbOPXLHgfBUbz', 'price': '98000.00', 'origQty': '0.0010', 'executedQty': '0.0000', 'type': 'LIMIT', 'side': 'SELL'}
+2026-07-01 18:01:15 | INFO     | trading_bot.orders | Order placed successfully: orderId=18235688295 status=NEW executedQty=0.0000 avgPrice=None
