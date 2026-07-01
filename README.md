@@ -136,40 +136,6 @@ All API requests, responses, and errors are written to:
 logs/trading_bot.log
 ```
 
-Sample logs from successful orders are included in `logs/`:
-
-- `submission_market_order.log` — real MARKET BUY run (sanitized for submission)
-- `submission_limit_order.log` — real LIMIT SELL run (sanitized for submission)
-- `sample_market_order.log` / `sample_limit_order.log` — illustrative examples
-
-Re-run the commands above with your credentials to generate fresh logs locally in `logs/trading_bot.log`.
-
-## Submitting to GitHub — security checklist
-
-**Never commit:**
-
-| File | Risk |
-|------|------|
-| `.env` | Contains your API key and secret — **critical** |
-| `.venv/` | Not needed in repo |
-
-**Safe to commit:**
-
-| Item | Notes |
-|------|------|
-| Source code | No secrets embedded |
-| `.env.example` | Placeholder values only |
-| `logs/submission_*.log` | Order IDs and trading metadata only — **no API keys** |
-| `README.md`, `requirements.txt` | Documentation |
-
-**Log upload risk (low for testnet):**
-
-- Logs contain **order IDs**, **client order IDs**, **symbols**, **quantities**, **prices**, and **timestamps**.
-- Logs do **not** contain API keys, secrets, or signatures.
-- Because the repo is **public**, anyone can see that you traded on testnet — this is normal for a hiring submission.
-- If you reuse the same API key on mainnet later, the log itself does not expose the key, but cancel/delete testnet keys after the interview if you prefer.
-
-**Recommended:** upload `submission_market_order.log` and `submission_limit_order.log` (already sanitized). Keep `trading_bot.log` local only (ignored by git).
 
 ## Assumptions
 
